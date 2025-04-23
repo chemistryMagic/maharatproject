@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
           throw new Error("Failed to fetch notes")
         }
         const data = await response.json()
-        return data.notes
+        return data
       } catch (error) {
         console.error("Error fetching notes:", error)
         showMessage("Error loading notes. Please try again later.", "error")
