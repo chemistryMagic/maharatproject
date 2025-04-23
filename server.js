@@ -18,7 +18,7 @@ const itemSchema = new mongoose.Schema({
     name: String,
     text: String,
     date: String,
-    color: String,
+    color: Object,
 });
 
 const Item = mongoose.model('Item', itemSchema);
