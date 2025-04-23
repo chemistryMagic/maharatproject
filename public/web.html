@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Developers Team</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading-screen">
+        <div class="loader-container">
+            <div class="loader">
+                <svg viewBox="0 0 80 80">
+                    <circle id="loader-circle" cx="40" cy="40" r="32"></circle>
+                </svg>
+            </div>
+            <div class="loader-text">
+                <span>L</span>
+                <span>O</span>
+                <span>A</span>
+                <span>D</span>
+                <span>I</span>
+                <span>N</span>
+                <span>G</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content" id="main-content">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-container">
+                <div class="logo">
+                    <a href="#home">مجموعه <span>شعبه 4</span></a>
+                </div>
+                
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="#home" class="active">الرئيسية</a></li>
+                        <li><a href="#team">الفريق</a></li>
+                        <li><a href="#notes">الملاحظات</a></li>
+                        <li><a href="#download">تحميل</a></li>
+                        <li><a href="/source">المصادر</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="theme-toggle">
+                    <label class="switch">
+                        <input type="checkbox" id="theme-switch">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <h1 class="reveal-text">شعبه 4</h1>
+                <p class="tagline reveal-text">بحث ادارة انتاج تطبيقات الويب <br> باشراف معلم الماده: أ/محمد الشخل</p>
+                <div class="hero-buttons">
+                    <a href="#team" class="btn btn-primary">روئية فريقنا</a>
+                    <a href="#notes" class="btn btn-secondary">الملاحظات</a>
+                </div>
+            </div>
+            <div class="hero-shape"></div>
+        </section>
+
+        <!-- Team Members Section -->
+        <section id="team" class="team-section">
+            <div class="section-header">
+                <h2 class="reveal-text">فريقنا</h2>
+                <p class="section-subtitle reveal-text">يمكنكم التعرف على فريقنا الذي اجتهد في بناء هذا المشروع.</p>
+            </div>
+            
+            <div class="team-members">
+                <!-- Team Member 1 -->
+                <div class="member-card reveal-item">
+                    <div class="member-avatar">
+                        <img src="./bg_1.png" alt="John Anderson">
+                        <div class="member-social">
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>بندر عبدالله الدوسري</h3>
+                        <span class="role-tag lead">قائد الفريق</span>
+                        <ul class="member-details">
+                            <li><strong>العمر:</strong> 18</li>
+                            <li><strong>الصف:</strong> ثالث ثانوي شعبه 4</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="member-card reveal-item">
+                    <div class="member-avatar">
+                        <img src="./bg_1.png" alt="Michael Chen">
+                        <div class="member-social">
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>تركي مسعود القحطاني</h3>
+                        <span class="role-tag frontend">عضو</span>
+                        <ul class="member-details">
+                            <li><strong>العمر:</strong> 18</li>
+                            <li><strong>الصف:</strong> ثالث ثانوي شعبه 4</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="member-card reveal-item">
+                    <div class="member-avatar">
+                        <img src="./bg_1.png" alt="David Rodriguez">
+                        <div class="member-social">
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>حمد مانع اليامي</h3>
+                        <span class="role-tag backend">عضو</span>
+                        <ul class="member-details">
+                            <li><strong>العمر:</strong> 18</li>
+                            <li><strong>الصف:</strong> ثالث ثانوي شعبه 4</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="member-card reveal-item">
+                    <div class="member-avatar">
+                        <img src="./bg_1.png" alt="Alex Thompson">
+                        <div class="member-social">
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>عبدالهادي عايض القحطاني</h3>
+                        <span class="role-tag design">عضو</span>
+                        <ul class="member-details">
+                            <li><strong>العمر:</strong> 18</li>
+                            <li><strong>الصف:</strong> ثالث ثانوي شعبه 4</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download Button Section -->
+        <section id="download" class="download-section">
+            <div class="section-header">
+                <h2 class="reveal-text">التحميل</h2>
+                <p class="section-subtitle reveal-text">الحصول على نسخه رقميه (PDF) الخاصه بالبحث.</p>
+            </div>
+            
+            <div class="download-container reveal-item">
+                <div class="download-info">
+                    <h3>ماذا ستحصل عليه؟</h3>
+                    <p>الملف يحتوي على: </p>
+                    <ul class="download-features">
+                        <li><i class="fas fa-check"></i> نسخه رقمية لملف المشروع PDF</li>
+                    </ul>
+                </div>
+                <button id="download-btn" class="download-btn">
+                    <span class="btn-text">تحميل</span>
+                    <span class="btn-icon"><i class="fas fa-download"></i></span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Notes Section -->
+        <section id="notes" class="notes-section">
+            <div class="section-header">
+                <h2 class="reveal-text">الملاحظات</h2>
+                <p class="section-subtitle reveal-text">قم بمشاركة رأيك ( سيضهر لجميع الزائرين )</p>
+            </div>
+            
+            <div class="wooden-board reveal-item">
+                <div id="notes-container" class="notes-container">
+                    <!-- Notes will be dynamically added here -->
+                    <div class="loading-notes">Loading notes...</div>
+                </div>
+                <button id="add-note-btn" class="add-note-btn">
+                    <i class="fas fa-plus"></i> قم بمشاركة رأيك
+                </button>
+            </div>
+        </section>
+
+        <!-- Note Form Modal -->
+        <div id="note-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2>قم بتعبة الاتي:</h2>
+                <form id="note-form">
+                    <div class="form-group">
+                        <label for="name">الاسم:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="note-text">الملاحظة:</label>
+                        <textarea id="note-text" name="note-text" rows="4" maxlength="1500" required></textarea>
+                        <div class="char-counter"><span id="char-count">0</span>/1500 عدد الاحرف المسموح بها</div>
+                    </div>
+                    <button type="submit" class="submit-note-btn">إضافة الملاحظة</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>مجموعه <span>شعبه 4</span></h3>
+                    <p>بحث ادارة انتاج تطبيقات الويب</p>
+                </div>
+                <div class="footer-links">
+                    <h4>روابط سريعه</h4>
+                    <ul>
+                        <li><a href="#home">الرئيسة</a></li>
+                        <li><a href="#team">الفريق</a></li>
+                        <li><a href="#notes">الملاحظات</a></li>
+                        <li><a href="#download">تحميل</a></li>
+                        <li><a href="/source">المصادر</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>تواصل معنى</h4>
+                    <div class="social-icons">
+                        <a href="https://www.snapchat.com/add/z3l_tk" target="_blank" style="text-decoration: none;"><i class="fab fa-snapchat"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 جميع الحقوق محفوظه لدى مجموعه شعبه 4.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

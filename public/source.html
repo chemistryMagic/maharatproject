@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>مصادري</title>
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background: #f4f6f9;
+      margin: 0;
+      padding: 40px;
+      direction: rtl;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 40px;
+    }
+
+    .return-btn {
+      position: relative;
+      font-size: 20px;
+      padding: 10px;
+      background: transparent;
+      border-radius: 50px;
+      border: 2px solid #3498db;
+      color: black;
+      transition: background 0.3s ease,
+      color 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .return-btn:hover {
+      background: #3498db;
+      color: white;
+    }
+
+    .source-list {
+      display: grid;
+      gap: 20px;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 15px;
+    }
+
+    .source {
+      background: #fff;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: transform 0.3s ease;
+    }
+
+    .source:hover {
+      transform: translateY(-5px);
+    }
+
+    .source-name {
+      font-size: 20px;
+      color: #444;
+    }
+
+    .source a {
+      text-decoration: none;
+      background-color: #3498db;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-size: 15px;
+      transition: background 0.3s ease;
+    }
+
+    .source a:hover {
+      background-color: #217dbb;
+    }
+  </style>
+</head>
+<body>
+  <h1>📚 قائمة المصادر</h1>
+  <a class="return-btn" href="/">الرجوع الى الرئيسية</a>
+  <div class="source-list">
+    <div class="source">
+      <div class="source-name">أكاديمية حسوب: مقالات تعليمية حول تطبيقات الويب.</div>
+      <a href="https://academy.hsoub.com/apps/web/" target="_blank">زيارة</a>
+    </div>
+    <div class="source">
+      <div class="source-name">ResearchGate: دراسة حول تطوير تطبيقات الويب لإدارة الإنتاج.</div>
+      <a href="https://www.researchgate.net/publication/232041470_Development_of_a_Web_Application_for_Dynamic_Production_Scheduling_in_Small_and_Medium_Enterprises" target="_blank">زيارة</a>
+    </div>
+    <div class="source">
+      <div class="source-name">ScienceDirect: مقدمة عن تطبيقات الويب.</div>
+      <a href="https://www.sciencedirect.com/topics/computer-science/web-based-application" target="_blank">زيارة</a>
+    </div>
+
+    <div class="source">
+        <div class="source-name">OER Commons: المحتوى التعليمي لتطبيقات الويب التعليمية.</div>
+        <a href="https://oercommons.org/courseware/lesson/93324/student/?section=6" target="_blank">زيارة</a>
+      </div>
+
+      <div class="source">
+        <div class="source-name">Springer: إدارة الإنتاج والتحكم عبر الويب في بيئة موزعة.</div>
+        <a href="https://link.springer.com/chapter/10.1007/978-1-84882-287-0_15" target="_blank">زيارة</a>
+      </div>
+  </div>
+</body>
+</html>
