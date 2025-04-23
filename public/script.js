@@ -340,7 +340,6 @@ document.addEventListener("DOMContentLoaded", () => {
         // Clean up
         setTimeout(() => {
           document.body.removeChild(link)
-          URL.revokeObjectURL(url)
         }, 100)
     })
   
