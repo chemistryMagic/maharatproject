@@ -2,10 +2,27 @@ const express = require("express")
 const fs = require("fs").promises
 const path = require("path")
 const cors = require("cors")
+const mongoose = require("mongoose")
 
 const app = express()
 const PORT = process.env.PORT || 3003
 const NOTES_FILE = path.join(__dirname, "notes.json")
+
+const MongoBase = process.env.DATAKEY;
+
+mongoose.connect(MongoBase)
+  .then(() => console.log('✅ Connected to MongoDB'))
+  .catch(err => console.error('❌ Mongo Error:', err));
+
+const itemSchema = new mongoose.Schema({
+    name: String,
+    text: String,
+    date: String,
+    color: String,
+});
+
+const Item = mongoose.model('Item', itemSchema);
+
 
 // Middleware
 app.use(cors())
@@ -35,9 +52,7 @@ app.get("/source", async (req, res) => {
 // Get all notes
 app.get('/api/notes', async (req, res) => {
     try {
-        await ensureNotesFile();
-        const data = await fs.readFile(NOTES_FILE, 'utf8');
-        const notes = JSON.parse(data);
+        const notes = await Item.find();
         res.json(notes);
     } catch (error) {
         console.error('Error reading notes:', error);
@@ -48,33 +63,17 @@ app.get('/api/notes', async (req, res) => {
 // Add a new note
 app.post('/api/notes', async (req, res) => {
     try {
-        await ensureNotesFile();
         const { name, text, date, color } = req.body;
         
         // Validate input
         if (!name || !text) {
             return res.status(400).json({ success: false, message: 'Name and text are required' });
         }
-        
-        // Read existing notes
-        const data = await fs.readFile(NOTES_FILE, 'utf8');
-        const notesData = JSON.parse(data);
-        
-        // Add new note
-        const newNote = {
-            id: Date.now().toString(),
-            name,
-            text,
-            date: date || new Date().toISOString(),
-            color
-        };
-        
-        notesData.notes.push(newNote);
-        
-        // Write updated notes back to file
-        await fs.writeFile(NOTES_FILE, JSON.stringify(notesData, null, 2));
-        
-        res.status(201).json({ success: true, note: newNote });
+
+        const id = Date.now().toString();
+        const newItem = new Item({ id, name, text, date, color });
+        await newItem.save();
+        res.status(201).json({ success: true, note: newItem });
     } catch (error) {
         console.error('Error adding note:', error);
         res.status(500).json({ success: false, message: 'Error adding note' });
@@ -84,7 +83,7 @@ app.post('/api/notes', async (req, res) => {
 // Reset notes
 app.get('/api/resetnotes', async (req, res) => {
     try {
-        await fs.writeFile(NOTES_FILE, JSON.stringify({ notes: [] }, null, 2));
+        await Item.deleteMany({});
         res.status(200).json({ success: true, message: 'Notes reset successfully' });
     } catch (error) {
         console.error('Error resetting notes:', error);
